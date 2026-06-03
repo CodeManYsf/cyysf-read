@@ -1,0 +1,24 @@
+filters:
+  and:
+    - file.hasTag("reading/theme")
+    - file.ext == "md"
+formulas:
+  updated: file.mtime.format("YYYY-MM-DD")
+properties:
+  theme:
+    displayName: 主题
+  book:
+    displayName: 书籍
+  status:
+    displayName: 状态
+  formula.updated:
+    displayName: 更新
+views:
+  - type: table
+    name: 主题卡片
+    order:
+      - file.name
+      - theme
+      - book
+      - status
+      - formula.updated

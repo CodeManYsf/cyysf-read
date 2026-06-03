@@ -1,0 +1,31 @@
+filters:
+  or:
+    - file.hasTag("reading/book")
+    - file.hasTag("reading/practice")
+formulas:
+  updated: file.mtime.format("YYYY-MM-DD")
+  progress_label: if(progress, progress.toString() + "%", "")
+properties:
+  author:
+    displayName: 作者
+  status:
+    displayName: 状态
+  start_date:
+    displayName: 开始日期
+  formula.progress_label:
+    displayName: 进度
+  current_day:
+    displayName: 天数
+  formula.updated:
+    displayName: 更新
+views:
+  - type: table
+    name: 书籍与实践
+    order:
+      - file.name
+      - author
+      - status
+      - start_date
+      - formula.progress_label
+      - current_day
+      - formula.updated
