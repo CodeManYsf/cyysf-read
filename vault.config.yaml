@@ -1,0 +1,40 @@
+vault_name: cyysf-read
+vault_schema_version: "2.0"
+description: Personal reading records vault. The vault stores records; skills execute workflows.
+
+required_skill: cyysf-reading-vault
+optional_skills:
+  - weread-skills
+
+principles:
+  - GitHub repository is the source of truth.
+  - Repository stores reading records, templates, indexes, and skill iteration archives.
+  - cyysf-reading-vault executes reading workflows, analysis, filing, and GitHub sync.
+  - weread-skills is optional and only provides WeRead highlights or notes.
+  - Important outcomes must be written back into this repository.
+
+paths:
+  entry: 00_入口
+  books: 01_书籍记录
+  themes: 02_主题知识库
+  actions: 03_行动实践库
+  inputs: 04_原始输入
+  obsidian_views: 05_Obsidian视图
+  templates: 06_模板
+  indexes: 07_索引
+  system_archive: 08_系统档案
+  archive: 99_归档
+
+book_record_layout:
+  overview: 00_书籍总览.md
+  pre_reading: 01_读前目标与读法判断.md
+  daily_notes: 02_每日思考
+  reviews: 03_阶段复盘
+  completion: 04_读后总结.md
+  structure: 05_整书脉络.md
+  method_log: 06_方法实践记录.md
+
+skill_iteration:
+  cyysf_reading_vault: 08_系统档案/skill迭代/cyysf-reading-vault
+
+agent_logs: 08_系统档案/多智能体协作记录

@@ -1,0 +1,4 @@
+interface:
+  display_name: "CYYSF Reading Vault"
+  short_description: "Maintain the record-first cyysf-read reading vault"
+  default_prompt: "Help me maintain my cyysf-read reading vault: preserve my own thinking first, file records in the repository, and sync changes to GitHub."

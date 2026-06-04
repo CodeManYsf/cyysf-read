@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"a1b2c3d4e5f60001","type":"file","x":0,"y":0,"width":360,"height":220,"file":"00_入口/知识库入口.md"},
+		{"id":"a1b2c3d4e5f60002","type":"file","x":-520,"y":300,"width":360,"height":220,"file":"07_索引/书籍索引.md"},
+		{"id":"a1b2c3d4e5f60003","type":"file","x":-80,"y":300,"width":360,"height":220,"file":"07_索引/每日思考索引.md"},
+		{"id":"a1b2c3d4e5f60004","type":"file","x":360,"y":300,"width":360,"height":220,"file":"07_索引/主题索引.md"},
+		{"id":"a1b2c3d4e5f60005","type":"file","x":800,"y":300,"width":360,"height":220,"file":"07_索引/行动原则索引.md"},
+		{"id":"a1b2c3d4e5f60006","type":"file","x":-520,"y":640,"width":360,"height":220,"file":"01_书籍记录/道商范蠡/00_书籍总览.md"},
+		{"id":"a1b2c3d4e5f60007","type":"file","x":-80,"y":640,"width":360,"height":220,"file":"01_书籍记录/道商范蠡/06_方法实践记录.md"},
+		{"id":"a1b2c3d4e5f60008","type":"file","x":360,"y":640,"width":360,"height":220,"file":"02_主题知识库/商业与经营/道商范蠡_商业与经营.md"},
+		{"id":"a1b2c3d4e5f60009","type":"text","x":800,"y":640,"width":360,"height":220,"text":"# 每周整理闭环\n\n每日只保留思考种子\n\n每周集中整理主题与行动\n\n读完回到读前目标\n\nA 档书再做整书脉络\n\n重要成果同步 GitHub"}
+	],
+	"edges":[
+		{"id":"b1b2c3d4e5f60001","fromNode":"a1b2c3d4e5f60001","fromSide":"bottom","toNode":"a1b2c3d4e5f60002","toSide":"top","toEnd":"arrow"},
+		{"id":"b1b2c3d4e5f60002","fromNode":"a1b2c3d4e5f60001","fromSide":"bottom","toNode":"a1b2c3d4e5f60003","toSide":"top","toEnd":"arrow"},
+		{"id":"b1b2c3d4e5f60003","fromNode":"a1b2c3d4e5f60001","fromSide":"bottom","toNode":"a1b2c3d4e5f60004","toSide":"top","toEnd":"arrow"},
+		{"id":"b1b2c3d4e5f60004","fromNode":"a1b2c3d4e5f60001","fromSide":"bottom","toNode":"a1b2c3d4e5f60005","toSide":"top","toEnd":"arrow"},
+		{"id":"b1b2c3d4e5f60005","fromNode":"a1b2c3d4e5f60002","fromSide":"bottom","toNode":"a1b2c3d4e5f60006","toSide":"top","toEnd":"arrow","label":"当前书"},
+		{"id":"b1b2c3d4e5f60006","fromNode":"a1b2c3d4e5f60003","fromSide":"bottom","toNode":"a1b2c3d4e5f60007","toSide":"top","toEnd":"arrow","label":"实践记录"},
+		{"id":"b1b2c3d4e5f60007","fromNode":"a1b2c3d4e5f60004","fromSide":"bottom","toNode":"a1b2c3d4e5f60008","toSide":"top","toEnd":"arrow","label":"主题沉淀"},
+		{"id":"b1b2c3d4e5f60008","fromNode":"a1b2c3d4e5f60005","fromSide":"bottom","toNode":"a1b2c3d4e5f60009","toSide":"top","toEnd":"arrow"}
+	]
+}
