@@ -14,25 +14,28 @@ tags:
 
 ## 当前判断
 
-当前目录 `C:\Users\yisif\Desktop\阅读` 还不是 Git 仓库。首次同步前，需要先在 GitHub 创建一个 repository，然后在本地初始化 Git 并绑定远程仓库。
+当前目录 `C:\Users\yisif\Desktop\阅读` 已经是 Git 仓库，并绑定远程仓库：
 
-## 首次迁移流程
-
-在 GitHub 创建仓库后，在本目录执行：
-
-```bash
-git init
-git add .
-git commit -m "初始化阅读知识库"
-git branch -M main
-git remote add origin <你的 GitHub 仓库地址>
-git push -u origin main
+```text
+https://github.com/CodeManYsf/cyysf-read.git
 ```
 
-示例：
+GitHub 仓库是唯一事实来源。Codex、WorkBuddy 或其他平台开始操作前，必须先确认本地是否和远程一致。
+
+## 新环境恢复流程
+
+如果换电脑或新平台需要维护知识库，优先从 GitHub 克隆：
 
 ```bash
-git remote add origin https://github.com/your-name/reading-knowledge-base.git
+git clone https://github.com/CodeManYsf/cyysf-read.git
+cd cyysf-read
+```
+
+如果本地已有仓库，每次开始前执行：
+
+```bash
+git status
+git pull --ff-only
 ```
 
 ## 每次复盘后的同步流程
@@ -42,7 +45,7 @@ git remote add origin https://github.com/your-name/reading-knowledge-base.git
 ```bash
 git status
 git diff --stat
-git add README.md AGENTS.md 00_知识库入口.md 00_阅读系统与模板 01_每日阅读回收 02_每周阅读复盘 03_书籍卡片 04_主题卡片库 05_行动原则库 07_Obsidian视图 08_模板 09_索引 10_智能体协作记录
+git add README.md AGENTS.md 00_知识库入口.md 00_本周阅读工作台.md 00_阅读系统与模板 01_每日阅读回收 02_每周阅读复盘 03_书籍卡片 04_主题卡片库 05_行动原则库 07_Obsidian视图 08_模板 09_索引 10_智能体协作记录
 git commit -m "[平台] 阅读复盘：YYYY-MM-DD 主题"
 git push
 ```
@@ -77,8 +80,8 @@ git commit -m "[平台] 书籍结项：YYYY-MM-DD 书名"
 ```text
 1. 今天新增或修改了哪些文件？
 2. 每日回收是否已经写入？
-3. 主题卡片是否已经落库？
-4. 行动原则是否需要新增或更新？
+3. 每日思考种子是否已经写入工作台或每日回收？
+4. 本周是否需要集中整理主题卡片或行动实践？
 5. README 或方法方案是否需要同步更新？
 6. 是否已经写入本次智能体协作记录？
 7. 有没有不该提交的临时文件？
@@ -97,19 +100,10 @@ git commit -m "[平台] 书籍结项：YYYY-MM-DD 书名"
 
 ## 和 Codex 协作时的固定提醒
 
-以后每次你让我完成阅读回顾、总结或方法调整后，我都应该在最后提醒：
+以后每次你让我完成阅读回顾、总结或方法调整后，如果产生了文件改动，我应该直接按本流程检查、提交并推送。若只是讨论规划、没有改文件，则不提交。
 
 ```text
-这次是否要提交并推送到 GitHub？
-```
-
-如果你确认，我再执行：
-
-```bash
-git status
-git add ...
-git commit -m ...
-git push
+有文件改动时：写入协作记录 -> git status -> git add -> git commit -> git push
 ```
 
 一句话原则：
